@@ -5,16 +5,15 @@ This page describes the multimodal interaction architecture developed for the To
 ---
 
 ## High-Level Architecture
-
 ```mermaid
 flowchart LR
-    A[User Speech Input] --> B[Voice Activity Detection (VAD)]
-    B --> C[Whisper ASR (Speech-to-Text)]
+    B[Voice Activity Detection (VAD)] --> C[Whisper ASR (Speech-to-Text)]
     C --> D[Text Preprocessing]
-    A --> E[Audio Feature Extraction (Mel-Spectrogram)]
-    E --> F[Tone / Emotion Analysis (CRNN Model)]
     D --> G[LLM Dialogue Manager (GPT-based)]
+
+    E[Audio Feature Extraction (Mel-Spectrogram)] --> F[Tone / Emotion Analysis (CRNN Model)]
     F --> G
+
     G --> H{Response Type?}
 
     H -- Verbal --> I[HSR Verbal Response (Console Output / TTS)]
@@ -24,4 +23,3 @@ flowchart LR
     J --> L[ROS 2 HSR Nodes (Trajectory, Head, LEDs)]
     K --> L
 ```
-
