@@ -1,1 +1,14 @@
+theme: "just-the-docs"
+
+title: "HSR Multimodal Interaction Stack"
+description: "Documentation for the HSR multimodal speech, tone, and LLM-based interaction system."
+
+url: "https://venkataraman-at.github.io"
+baseurl: "/hsr_multimodal_interaction_stack"
+
+nav_order: 1
+
+aux_links:
+  "GitHub Repository":
+    - "https://github.com/venkataraman-at/hsr_multimodal_interaction_stack"
 
