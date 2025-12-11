@@ -2,8 +2,6 @@
 
 This page describes the multimodal interaction architecture developed for the Toyota Human Support Robot (HSR). The system integrates speech recognition, voice activity detection, tone/emotion analysis, LLM-based dialogue reasoning, and ROS 2 gesture/behavior actuation to enable natural, adaptive, and emotionally aware human–robot interaction.
 
----
-
 ## High-Level Architecture
 ```mermaid
 flowchart LR
@@ -23,3 +21,4 @@ flowchart LR
     J --> L[ROS 2 HSR Nodes (Trajectory, Head, LEDs)]
     K --> L
 ```
+
