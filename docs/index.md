@@ -12,7 +12,7 @@ Advisor: **Prof. Taskin Padir**
 
 ---
 
-# HSR Multimodal Interaction Stack
+## System Overview
 
 The **HSR Multimodal Interaction Stack** is a speech-, tone-, and LLM-driven conversational interaction system developed for the **Toyota Human Support Robot (HSR)**.  
 It enables natural, emotionally aware conversations by combining modern AI models with ROS 2 robot behavior controllers.
