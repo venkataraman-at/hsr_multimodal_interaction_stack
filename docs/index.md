@@ -71,8 +71,6 @@ Use the navigation sidebar or the links below:
 - [Usage Guide](usage.md)  
 - [Features](features.md)  
 
-More sections (Demonstrations, Modes, API Reference, Troubleshooting, Future Work) can be added as the project grows.
-
 ---
 
 ## Purpose of the Project
