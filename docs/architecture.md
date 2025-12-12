@@ -5,36 +5,102 @@ nav_order: 2
 
 # System Architecture
 
-This page describes the multimodal interaction pipeline used for the Toyota HSR platform.  
-The system integrates speech recognition, tone/emotion analysis, LLM-based dialogue reasoning, and ROS 2 behavior execution.
+This page describes the multimodal interaction pipeline used for the Toyota Human Support Robot (HSR).  
+The system integrates speech recognition, tone/emotion analysis, LLM-based dialogue reasoning, and ROS 2 behavior execution to create natural and adaptive human–robot interaction.
 
 ---
 
-## Architecture Diagram
+## Overview
 
-The architecture diagram will be added here once the image is prepared.
+The HSR interaction system processes user speech and emotional tone in parallel.  
+It generates context-aware verbal responses and triggers appropriate robot behaviors such as gestures or wellness routines.
 
-For now, this page introduces the main components of the pipeline.
+The pipeline operates in four main stages:
 
 ---
 
-## Components
+## 1. Audio Input & Detection
 
-### 1. Audio Processing
-- Voice Activity Detection (VAD)
-- Whisper ASR for speech-to-text
-- Mel-Spectrogram extraction for tone analysis
+### **Voice Activity Detection (VAD)**
+- Detects when the user begins and stops speaking  
+- Prevents unnecessary processing  
+- Segments audio into meaningful chunks  
 
-### 2. Tone / Emotion Analysis
-- CRNN classifier predicts affective state
-- Works in parallel with ASR
+---
 
-### 3. Dialogue Manager
-- GPT-based LLM with emotion and context inputs
-- Produces meaningful and supportive responses
+## 2. Speech Understanding Path
 
-### 4. HSR Behavior Execution
-- Gesture control (arm, head)
-- Engagement routines (breathing exercises, positivity prompts)
-- ROS 2 action clients and publishers
+### **Whisper ASR (Speech-to-Text)**
+- Converts user speech into text  
+- Handles noise, accents, and conversational inputs
 
+### **Text Processing**
+- Cleans, normalizes, and formats text for the LLM  
+
+---
+
+## 3. Emotion & Tone Analysis Path
+
+This runs **simultaneously** with ASR.
+
+### **Mel-Spectrogram Extraction**
+- Converts audio into spectral features suitable for emotion classification
+
+### **CRNN Emotion Classifier**
+Predicts the emotional tone of the user, such as:
+- neutral  
+- happy  
+- sad  
+- stressed  
+- angry  
+
+The emotion label is sent to the dialogue manager to produce emotionally appropriate responses.
+
+---
+
+## 4. Dialogue Manager (LLM)
+
+A GPT-based model receives:
+- ASR text  
+- detected emotion  
+- conversation context  
+
+The LLM generates:
+- verbal responses  
+- engagement prompts  
+- wellness routines (when tone indicates stress)  
+- storytelling or supportive behaviors  
+- optional gesture/behavior commands  
+
+---
+
+## 5. Behavior Execution (ROS 2)
+
+When the LLM requests physical action, the system interacts with ROS 2 nodes for:
+
+### **Gestures**
+- head nods  
+- arm movements  
+- expressive behaviors  
+
+### **Wellness / Supportive Routines**
+Triggered if:
+- the user explicitly asks (“Can you help me calm down?”)  
+- the emotion model detects stress or sadness  
+
+### ROS 2 Interfaces
+- Trajectory controllers  
+- Head control nodes  
+- LED or expressive modules (if available)
+
+---
+
+## Summary
+
+The system combines:
+- ASR for understanding words  
+- CRNN for understanding emotion  
+- LLM for reasoning and generating supportive responses  
+- ROS 2 for executing robot behaviors  
+
+This allows the HSR to function as a conversational and emotionally aware companion capable of both verbal and physical interaction.
