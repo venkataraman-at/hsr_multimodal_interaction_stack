@@ -1,6 +1,15 @@
 ---
-title: "Overview"
+title: "Pediatric Radiotherapy Support with Toyota HSR"
 nav_order: 1
+---
+
+# Pediatric Radiotherapy Support with Toyota HSR
+
+**A Multimodal, Emotion-Aware Conversational Framework for Pediatric Clinical Support**  
+**Aadarsh Praveen Selvaraj Ajithakumari**  
+Graduate Researcher, RIVeR Lab — Northeastern University  
+Advisor: **Prof. Taskin Padir**
+
 ---
 
 # HSR Multimodal Interaction Stack
@@ -16,7 +25,6 @@ The system integrates:
 - ROS 2 gesture and behavior controllers  
 
 Its goal is to allow the HSR to respond not only to *what* a user says but also to *how* they say it, enabling supportive and adaptive human–robot interaction.
----
 
 ## Pediatric Interaction Context
 
