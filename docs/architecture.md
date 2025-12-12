@@ -85,7 +85,7 @@ When the LLM requests physical action, the system interacts with ROS 2 nodes for
 
 ### **Wellness / Supportive Routines**
 Triggered if:
-- the user explicitly asks (“Can you help me calm down?”)  
+- the user explicitly asks and when the robot detects mood fluctuations  
 - the emotion model detects stress or sadness  
 
 ### ROS 2 Interfaces
