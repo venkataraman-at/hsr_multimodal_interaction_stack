@@ -3,7 +3,7 @@ remote_theme: just-the-docs/just-the-docs
 title: "HSR Multimodal Interaction Stack"
 description: "Documentation for the HSR multimodal speech, tone, and LLM-based interaction system."
 
-logo: "/hsr_multimodal_interaction_stack/docs/media/logo.png"
+logo: "/hsr_multimodal_interaction_stack/media/logo.png"
 
 url: "https://venkataraman-at.github.io"
 baseurl: "/hsr_multimodal_interaction_stack"
