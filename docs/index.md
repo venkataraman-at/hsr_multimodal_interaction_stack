@@ -6,7 +6,7 @@ nav_order: 1
 # Pediatric Radiotherapy Support with Toyota HSR
 
 **A Multimodal, Emotion-Aware Conversational Framework for Pediatric Clinical Support**  
-**Aadarsh Praveen Selvaraj Ajithakumari**  
+**Athmavidya Venkataraman**  
 Graduate Researcher, RIVeR Lab — Northeastern University  
 Advisor: **Prof. Taskin Padir**
 
