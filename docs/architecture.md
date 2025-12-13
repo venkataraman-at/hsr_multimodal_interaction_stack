@@ -15,7 +15,7 @@ The system integrates speech recognition, tone/emotion analysis, LLM-based dialo
 The HSR interaction system processes user speech and emotional tone in parallel.  
 It generates context-aware verbal responses and triggers appropriate robot behaviors such as gestures or wellness routines.
 
-The pipeline operates in four main stages:
+The pipeline operates in five main stages:
 
 ---
 
