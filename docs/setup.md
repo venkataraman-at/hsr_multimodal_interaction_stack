@@ -152,7 +152,7 @@ If topics and services from the HSR are visible, the domain configuration is cor
 ros2 topic list
 ros2 action list
 ```
-#### 5. Supported Interaction Modes
+#### 4. Supported Interaction Modes
 
 ### Speech Responses
 The robot interprets user speech and generates:
