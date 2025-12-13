@@ -24,9 +24,10 @@ This page describes how to install and run the multimodal interaction stack for 
 
 ---
 
-## 2. Clone the Repository
-
-```
+## 2. Create ROS 2 Workspace and Clone the Repository
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
 git clone https://github.com/venkataraman-at/hsr_multimodal_interaction_stack.git
 cd hsr_multimodal_interaction_stack
 ```
@@ -54,7 +55,7 @@ source /opt/ros/humble/setup.bash
 (Optional) Build your workspace:
 
 ```
-cd ros2_ws
+cd ~/ros2_ws
 colcon build
 source install/setup.bash
 ```
@@ -66,7 +67,9 @@ Launch the system across **three terminals**.
 
 ### Terminal 1 — Launch Gazebo world
 
-```ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py```
+```bash
+ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py
+```
 
 ### Terminal 2 — Start the interaction node
 ```bash
@@ -84,7 +87,9 @@ ros2 service call /start_convo std_srvs/srv/SetBool "{data: true}"
 
 ### Verify memory state (optional)
 
-```cat ~/.hsr_gpt_hri/memory.json | jq .```
+```bash
+cat ~/.hsr_gpt_hri/memory.json | jq .
+```
 
 This launches:
 - Whisper ASR
@@ -110,7 +115,9 @@ Your laptop and the HSR **must use the same `ROS_DOMAIN_ID`** to communicate.
 
 #### 1. Check the current `ROS_DOMAIN_ID` on your machine
 
-```echo $ROS_DOMAIN_ID```
+```bash
+echo $ROS_DOMAIN_ID
+```
 
 - If a number is returned (e.g., `30`), that is your current domain ID  
 - If nothing is returned, the default value `0` is being used  
@@ -118,7 +125,9 @@ Your laptop and the HSR **must use the same `ROS_DOMAIN_ID`** to communicate.
 #### 2. Check the robot’s `ROS_DOMAIN_ID`
 On the HSR (or via SSH into the robot), run:
 
-```echo $ROS_DOMAIN_ID```
+```bash
+echo $ROS_DOMAIN_ID
+```
 
 The value on the robot **must match** the value on your workstation.
 
@@ -127,10 +136,15 @@ The value on the robot **must match** the value on your workstation.
 #### 3. Set `ROS_DOMAIN_ID` (if needed)
 If the values do not match, set it manually on your machine:
 
-```export ROS_DOMAIN_ID=<robot_domain_id>```
+```bash
+export ROS_DOMAIN_ID=<robot_domain_id>
+```
 
 Example:
+
+```bash
 export ROS_DOMAIN_ID=30
+```
 
 To make this persistent across terminals:
 ```bash
@@ -144,14 +158,11 @@ After setting the domain ID, confirm connectivity:
 ```bash
 ros2 topic list
 ros2 service list
+ros2 action list
 ```
 
 If topics and services from the HSR are visible, the domain configuration is correct.
 
-```bash
-ros2 topic list
-ros2 action list
-```
 ## 7. Supported Interaction Modes
 
 ### Speech Responses
