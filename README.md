@@ -7,7 +7,6 @@ This project was developed as part of research conducted at the RIVeR Lab, North
 **Platform:** Toyota Human Support Robot (HSR)  
 **Application Domain:** Pediatric Radiotherapy Support
 
-
 A ROS 2–based multimodal human–robot interaction framework for Toyota’s Human Support Robot (HSR), integrating speech recognition, emotion-aware dialogue, and expressive robot behaviors.
 
 This project implements a modular interaction stack that enables natural, emotionally aware communication between a human user and the HSR. The system combines real-time speech recognition, vocal emotion analysis, large language model–based dialogue generation, and ROS 2–controlled robot gestures.
@@ -38,7 +37,8 @@ git clone https://github.com/venkataraman-at/hsr_multimodal_interaction_stack.gi
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
-ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py 
+ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py
+
 # Terminal 2
 cd ~/ros2_ws
 source install/setup.bash
