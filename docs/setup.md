@@ -69,17 +69,18 @@ Launch the system across **three terminals**.
 ```ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py```
 
 ### Terminal 2 — Start the interaction node
-
-```cd ~/hsr_ros2_ws
+```bash
+cd ~/ros2_ws
 source install/setup.bash
-ros2 run hsr_hri llm_convo```
-
+ros2 run hsr_hri llm_convo
+```
 
 ### Terminal 3 — Start the conversation service
-
-```cd ~/hsr_ros2_ws
+```bash
+cd ~/ros2_ws
 source install/setup.bash
-ros2 service call /start_convo std_srvs/srv/SetBool "{data: true}"```
+ros2 service call /start_convo std_srvs/srv/SetBool "{data: true}"
+```
 
 ### Verify memory state (optional)
 
@@ -132,20 +133,22 @@ Example:
 export ROS_DOMAIN_ID=30
 
 To make this persistent across terminals:
-
-```echo "export ROS_DOMAIN_ID=30" >> ~/.bashrc
-source ~/.bashrc```
+```bash
+echo "export ROS_DOMAIN_ID=30" >> ~/.bashrc
+source ~/.bashrc
+```
 
 #### 4. Verify ROS 2 communication
 After setting the domain ID, confirm connectivity:
 
-
-```ros2 topic list
-ros2 service list```
+```bash
+ros2 topic list
+ros2 service list
+```
 
 If topics and services from the HSR are visible, the domain configuration is correct.
 
-```
+```bash
 ros2 topic list
 ros2 action list
 ```
