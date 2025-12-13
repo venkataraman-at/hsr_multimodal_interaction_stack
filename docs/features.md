@@ -94,6 +94,7 @@ A custom prompt architecture provides the HSR with dialogue abilities, intent un
 - Unsafe requests are handled through acknowledgment and redirection, ensuring the robot remains assistive rather than directive, particularly in sensitive environments such as pediatric care.
 
 **Custom personas:**
+
 The dialogue manager supports configurable personas that adapt communication style while preserving the same safety boundaries.
 
 Examples include:
@@ -105,6 +106,7 @@ Examples include:
 Personas influence how the robot speaks, not what it is allowed to do.
 
 **Mode-aware response generation:**
+
 Personas operate in conjunction with high-level interaction modes (Wellness, Story, Task), allowing responses to be further constrained based on context while maintaining consistent grounding rules.
 
 ---
