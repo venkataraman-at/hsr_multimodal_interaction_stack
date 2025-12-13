@@ -198,7 +198,4 @@ to safely terminate the interaction loop.
 
 ---
 
-# Usage complete.
----
-
 # Setup complete.
