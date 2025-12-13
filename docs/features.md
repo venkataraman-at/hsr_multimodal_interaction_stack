@@ -35,6 +35,39 @@ A lightweight VAD module continuously monitors audio input to determine when the
 ## 3. CRNN-Based Tone & Emotion Recognition
 A Convolutional Recurrent Neural Network (CRNN) analyzes Mel-spectrograms to determine the user’s vocal tone and emotional state.
 
+**Why a CRNN architecture is used:**
+
+Emotion in speech evolves over time and cannot be captured from isolated frames
+
+CNN layers extract local acoustic patterns such as pitch contours, harmonics, and energy distributions
+
+RNN layers (LSTM/GRU) model temporal dependencies across speech frames
+
+Combines spatial feature learning with temporal context modeling
+
+More effective than CNN-only or RNN-only approaches for speech emotion recognition
+
+**What a Mel-spectrogram represents:**
+
+Time on the x-axis
+
+Frequency (mapped to the Mel scale) on the y-axis
+
+Energy / intensity encoded as magnitude
+
+**Why Mel-spectrograms are used:**
+
+Human emotions are primarily conveyed through prosodic features such as pitch, intensity, rhythm, and spectral shape
+
+The Mel scale compresses high frequencies and emphasizes perceptually relevant bands, mimicking how humans hear sound
+
+Converts 1-D audio signals into a 2-D structure suitable for convolutional processing
+
+Robust to minor noise variations compared to raw waveform features
+
+In this system, Mel-spectrograms serve as a compact and expressive representation of vocal emotion cues.
+
+
 **Detected categories:**
 - Neutral  
 - Happy / positive  
