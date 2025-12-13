@@ -7,9 +7,6 @@ nav_order: 5
 
 This page showcases example interactions with the **HSR Multimodal Interaction Stack**, including speech recognition, emotion inference, dialogue responses, and robot behaviors.
 
-You may upload videos, GIFs, screenshots, or console transcripts here.  
-Demo files can be placed inside `docs/media/` and referenced on this page.
-
 ---
 
 ## 1. Full Multimodal Interaction Demo
@@ -21,9 +18,7 @@ A complete demonstration of the system, including:
 - GPT dialogue generation  
 - ROS 2 gesture execution  
 
-**Demo will be uploaded soon.**
-
-_A placeholder will be replaced with video or GIF soon._
+[Watch Full Demo](../media/Full_Demo.mp4)
 
 ---
 
@@ -75,39 +70,19 @@ Below are screenshots from the CRNN-based vocal emotion classifier, showing how 
 
 These will show gestures or routines the robot performs:
 
-- Head nods  
-- Arm gestures  
+- **Greeting behavior**  
+  [Greeting Demo](../media/Greeting.mp4)
 
-**Demo files will be uploaded soon.**
+- **Head nod (affirmation)**  
+  [Head Nod Demo](../media/Head_nod.mp4)
+
+- **Head shake (negation)**  
+  [Head Shake Demo](../media/Head_shake.mp4)
+
+- **Conversation closure**  
+  [Goodbye Demo](../media/Goodbye.mp4)
 
 ---
-
-## How to Add Your Videos Later
-
-Upload your file (e.g., `demo1.mp4`) into:
-
-```
-docs/media/
-```
-
-Then link it in Markdown like this:
-
-```
-![Demo Video](media/demo1.mp4)
-```
-
-or for GIF:
-
-```
-![Interaction Demo](media/demo.gif)
-```
-
-or for image screenshots:
-
-```
-![Screenshot](media/screenshot1.png)
-```
-
 ---
 
 More demos can be added as the project expands.
