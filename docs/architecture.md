@@ -89,10 +89,11 @@ Triggered if:
 - the emotion model detects stress or sadness  
 
 ### ROS 2 Interfaces
-- Trajectory controllers  
+- Trajectory controllers
+  
+---
 
 ## 6. Head control nodes  
----
 
 ## Summary
 
