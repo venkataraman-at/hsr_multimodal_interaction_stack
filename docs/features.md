@@ -80,9 +80,32 @@ A custom prompt architecture provides the HSR with dialogue abilities, intent un
 **Capabilities:**
 - Natural conversation  
 - Task-related dialogue (“remind me”, “guide me”, “tell a story”)  
-- Emotional alignment with user tone  
-- Safety and grounding rules to avoid unsafe actions  
-- Supports custom personas and modes  
+- Emotional alignment with user tone
+- Multi turn Conversational memory 
+- Safety and grounding rules to avoid unsafe actions
+- Supports custom personas and modes
+
+**Safety and grounding rules:**
+
+- The HSR does not provide medical, diagnostic, or treatment instructions
+- The HSR avoids legal, financial, or emergency-response advice
+- The robot does not replace clinicians, caregivers, or professional judgment
+- Responses are supportive and non-authoritative rather than prescriptive
+- Unsafe requests are handled through acknowledgment and redirection, ensuring the robot remains assistive rather than directive, particularly in sensitive environments such as pediatric care.
+
+**Custom personas:**
+The dialogue manager supports configurable personas that adapt communication style while preserving the same safety boundaries.
+
+Examples include:
+
+- Calm Companion: soft tone, reassurance-focused language, slower pacing
+- Friendly Storyteller: expressive narration for engagement and distraction
+- Task Assistant: concise, structured explanations for procedural support
+
+Personas influence how the robot speaks, not what it is allowed to do.
+
+**Mode-aware response generation:**
+Personas operate in conjunction with high-level interaction modes (Wellness, Story, Task), allowing responses to be further constrained based on context while maintaining consistent grounding rules.
 
 ---
 
