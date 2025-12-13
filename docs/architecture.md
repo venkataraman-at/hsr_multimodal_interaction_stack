@@ -91,8 +91,6 @@ Triggered if:
 ### ROS 2 Interfaces
 - Trajectory controllers  
 - Head control nodes  
-- LED or expressive modules (if available)
-
 ---
 
 ## Summary
