@@ -7,6 +7,7 @@ import numpy as np
 from collections import deque
 import whisper
 import soundfile as sf
+ASR_ENABLED = True
 
 import rclpy
 from rclpy.node import Node
@@ -652,9 +653,10 @@ class HsrGestures(Node):
         return bool(self._gate_open)
 
     def speak_streaming_from_tokens(self, token_iter, mood="calm"):
-        # Stop any current speech if new one starts
+        global ASR_ENABLED
+        ASR_ENABLED = False
         _emotive.stop()
-        # stream out with barge-in check
+
         _emotive.speak_chunks_streaming(
             token_iter,
             mood=mood,
@@ -662,10 +664,20 @@ class HsrGestures(Node):
             bargein_flag_getter=self._bargein_active
         )
 
+        ASR_ENABLED = True           
+        self._asr_ignore_until = time.time() + 0.8
+
+
     def speak_once(self, text: str, mood="calm", ignore_extra=1.2):
+        global ASR_ENABLED
+        ASR_ENABLED = False            
         _emotive.stop()
+
         _emotive.speak_once(text, mood=mood)
+
+        ASR_ENABLED = True            
         self._asr_ignore_until = time.time() + ignore_extra
+
 
     # ====== Intent & paralinguistic cues ======
     def _gesture_from_tag(self, tag: str):
@@ -787,8 +799,13 @@ class HsrGestures(Node):
         def _record_loop():
             duration = 3.0
             while self._asr_streaming and rclpy.ok():
+                if not ASR_ENABLED:
+                    time.sleep(0.05)
+                    continue
+
                 try:
                     self.get_logger().info("Listening…")
+
                     audio = sd.rec(
                         int(duration * sr),
                         samplerate=sr,
