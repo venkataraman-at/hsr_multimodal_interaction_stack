@@ -123,8 +123,7 @@ The dialogue system connects to ROS 2 nodes to enable physical HSR behaviors.
 
 **Capabilities:**
 - Head movement (nodding, shaking)  
-- Arm gestures  
-- LED feedback  
+- Arm gestures    
 - Extensible to navigation or manipulation pipelines  
 
 The system is designed to be modular so new ROS behaviors can be plugged in easily.
