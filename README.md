@@ -1,12 +1,12 @@
 # HSR Multimodal Interaction Stack
 
-### This project was developed as part of research conducted at the RIVeR Lab, Northeastern University.
+## Project Context
+This project was developed as part of research conducted at the RIVeR Lab, Northeastern University.
 
-#### Primary developer: Athmavidya Venkataraman
+**Primary Developer:** Athmavidya Venkataraman  
+**Platform:** Toyota Human Support Robot (HSR)  
+**Application Domain:** Pediatric Radiotherapy Support
 
-#### Platform: Toyota Human Support Robot (HSR)
-
-### Project: Pediatric Radiotherapy Support with Toyota HSR
 
 A ROS 2–based multimodal human–robot interaction framework for Toyota’s Human Support Robot (HSR), integrating speech recognition, emotion-aware dialogue, and expressive robot behaviors.
 
@@ -31,13 +31,25 @@ The stack is designed for research and experimentation in socially assistive rob
 ## Quick Start (Gazebo)
 
 ```bash
+# Terminal 1
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 git clone https://github.com/venkataraman-at/hsr_multimodal_interaction_stack.git
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
-ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py
+ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py 
+# Terminal 2
+cd ~/ros2_ws
+source install/setup.bash
+ros2 run hsr_hri llm_convo
+
+# Terminal 3
+cd ~/ros2_ws
+source install/setup.bash
+ros2 service call /start_convo std_srvs/srv/SetBool "{data: true}"
+```
+
 
 
 
