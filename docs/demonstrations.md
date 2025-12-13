@@ -48,14 +48,26 @@ _A placeholder will be replaced with video or GIF soon._
 
 ## 3. Emotion Detection Examples
 
-You can upload screenshots here tomorrow.  
-For now, placeholders:
+Below are screenshots from the CRNN-based vocal emotion classifier, showing how the system interprets different tones from test audio.
 
-**Input Audio:** _sad tone_  
-**Emotion Model Output:** `sad (0.82 confidence)`
+### **Sad**
+![Sad Emotion](assets/images/sad.png)
 
-**Input Audio:** _frustrated tone_  
-**Emotion Model Output:** `angry/frustrated (0.71 confidence)`
+---
+
+### **Pleasant Surprise**
+![Pleasant Surprise Emotion](assets/images/pleasant_surprise.png)
+
+---
+
+### **Disgust**
+![Disgust Emotion](assets/images/disgust.png)
+
+---
+
+### **Calm**
+![Calm Emotion](assets/images/calm.png)
+
 
 ---
 
