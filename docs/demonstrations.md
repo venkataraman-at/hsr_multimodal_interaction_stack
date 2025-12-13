@@ -18,7 +18,10 @@ A complete demonstration of the system, including:
 - GPT dialogue generation  
 - ROS 2 gesture execution  
 
-[Watch Full Demo](../media/Full_Demo.mp4)
+<video controls width="800">
+  <source src="/hsr_multimodal_interaction_stack/media/demos/full_demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
@@ -70,19 +73,26 @@ Below are screenshots from the CRNN-based vocal emotion classifier, showing how 
 
 These will show gestures or routines the robot performs:
 
-- **Greeting behavior**  
-  [Greeting Demo](../media/Greeting.mp4)
+- ### Greeting
+<video controls width="400">
+  <source src="/hsr_multimodal_interaction_stack/media/demos/greeting.mp4" type="video/mp4">
+</video>
 
-- **Head nod (affirmation)**  
-  [Head Nod Demo](../media/Head_nod.mp4)
+- ### Head Nod
+<video controls width="400">
+  <source src="/hsr_multimodal_interaction_stack/media/demos/head_nod.mp4" type="video/mp4">
+</video>
 
-- **Head shake (negation)**  
-  [Head Shake Demo](../media/Head_shake.mp4)
+- ### Head Shake
+<video controls width="400">
+  <source src="/hsr_multimodal_interaction_stack/media/demos/head_shake.mp4" type="video/mp4">
+</video>
 
-- **Conversation closure**  
-  [Goodbye Demo](../media/Goodbye.mp4)
+- ### Goodbye
+<video controls width="400">
+  <source src="/hsr_multimodal_interaction_stack/media/demos/goodbye.mp4" type="video/mp4">
+</video>
 
----
 ---
 
 More demos can be added as the project expands.
