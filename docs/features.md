@@ -139,7 +139,10 @@ Robot behavior includes:
 Supports simple procedural tasks like:
 - Explaining steps  
 - Providing reminders  
-- Conversational assistance for daily routines  
+- Conversational assistance for daily routines
+
+*Note: In the current version of this project, Task / Command Mode is limited to conversational and informational assistance only.
+Physical task execution (e.g., manipulation, navigation, object handling) is not yet implemented and is intended for future extensions of the system.*
 
 ---
 
