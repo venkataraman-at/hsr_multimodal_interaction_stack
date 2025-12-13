@@ -30,7 +30,6 @@ This page describes how to install and run the multimodal interaction stack for 
 git clone https://github.com/venkataraman-at/hsr_multimodal_interaction_stack.git
 cd hsr_multimodal_interaction_stack
 ```
-
 ---
 
 ## 3. Install Python Dependencies
@@ -52,7 +51,6 @@ Source ROS:
 ```
 source /opt/ros/humble/setup.bash
 ```
-
 (Optional) Build your workspace:
 
 ```
@@ -60,16 +58,32 @@ cd ros2_ws
 colcon build
 source install/setup.bash
 ```
-
 ---
 
-## 5. Running the Interaction Script
+## 5. Running in Gazebo (Simulation)
 
-Run the full pipeline:
+Launch the system across **three terminals**.
 
-```
-python3 scripts/llm_convo.py
-```
+### Terminal 1 — Launch Gazebo world
+
+```ros2 launch hsrb_gazebo_launch hsrb_apartment_world.launch.py```
+
+### Terminal 2 — Start the interaction node
+
+```cd ~/hsr_ros2_ws
+source install/setup.bash
+ros2 run hsr_hri llm_convo```
+
+
+### Terminal 3 — Start the conversation service
+
+```cd ~/hsr_ros2_ws
+source install/setup.bash
+ros2 service call /start_convo std_srvs/srv/SetBool "{data: true}"```
+
+### Verify memory state (optional)
+
+```cat ~/.hsr_gpt_hri/memory.json | jq .```
 
 This launches:
 - Whisper ASR
@@ -87,6 +101,49 @@ Ensure:
 - Network connection is active
 - ROS_DOMAIN_ID matches
 - Services for head/arm control are available
+
+### Determining and Setting `ROS_DOMAIN_ID`
+
+`ROS_DOMAIN_ID` is used by ROS 2 DDS to isolate communication between different robots, simulations, or users on the same network.  
+Your laptop and the HSR **must use the same `ROS_DOMAIN_ID`** to communicate.
+
+#### 1. Check the current `ROS_DOMAIN_ID` on your machine
+
+```echo $ROS_DOMAIN_ID```
+
+- If a number is returned (e.g., `30`), that is your current domain ID  
+- If nothing is returned, the default value `0` is being used  
+
+#### 2. Check the robot’s `ROS_DOMAIN_ID`
+On the HSR (or via SSH into the robot), run:
+
+```echo $ROS_DOMAIN_ID```
+
+The value on the robot **must match** the value on your workstation.
+
+> In many lab setups, the robot’s `ROS_DOMAIN_ID` is predefined by system configuration or lab policy.
+
+#### 3. Set `ROS_DOMAIN_ID` (if needed)
+If the values do not match, set it manually on your machine:
+
+```export ROS_DOMAIN_ID=<robot_domain_id>```
+
+Example:
+export ROS_DOMAIN_ID=30
+
+To make this persistent across terminals:
+
+```echo "export ROS_DOMAIN_ID=30" >> ~/.bashrc
+source ~/.bashrc```
+
+#### 4. Verify ROS 2 communication
+After setting the domain ID, confirm connectivity:
+
+
+```ros2 topic list
+ros2 service list```
+
+If topics and services from the HSR are visible, the domain configuration is correct.
 
 ```
 ros2 topic list
