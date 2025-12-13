@@ -3,7 +3,7 @@
 
 A ROS 2–based multimodal human–robot interaction framework for Toyota’s Human Support Robot (HSR), integrating speech recognition, emotion-aware dialogue, and expressive robot behaviors.
 
-# This project was developed as part of research conducted at the RIVeR Lab, Northeastern University.
+### This project was developed as part of research conducted at the RIVeR Lab, Northeastern University.
 
 **Primary developer: Athmavidya Venkataraman**
 
