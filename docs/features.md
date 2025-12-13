@@ -95,7 +95,7 @@ Triggered by:
 - Detected negative emotion via CRNN  
 
 Robot behavior includes:
-- Calming dialogue  
+- Calming dialogue ("Let’s take three calm breaths together, like we’re gently blowing bubbles") 
 - Breathing prompts  
 
 ---
