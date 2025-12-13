@@ -1,4 +1,5 @@
 # HSR Multimodal Interaction Stack
+### Project: Pediatric Radiotherapy Support with Toyota HSR
 
 A ROS 2–based multimodal human–robot interaction framework for Toyota’s Human Support Robot (HSR), integrating speech recognition, emotion-aware dialogue, and expressive robot behaviors.
 
