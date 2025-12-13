@@ -90,11 +90,9 @@ Triggered if:
 
 ### ROS 2 Interfaces
 - Trajectory controllers
+- Head control nodes
   
 ---
-
-## 6. Head control nodes  
-
 ## Summary
 
 The system combines:
