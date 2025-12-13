@@ -152,7 +152,53 @@ If topics and services from the HSR are visible, the domain configuration is cor
 ros2 topic list
 ros2 action list
 ```
+#### 5. Supported Interaction Modes
 
+### Speech Responses
+The robot interprets user speech and generates:
+- conversational replies  
+- task responses  
+- supportive / wellness dialogue  
+
+### Tone-Aware Behavior
+The CRNN model detects emotion categories such as:
+- neutral/calm  
+- happy  
+- sad  
+- angry  
+- stressed
+- pleasant_surprise
+- disgust 
+
+The detected emotional tone modifies the LLM’s response strategy.
+
+### Gestures & Movements
+Depending on LLM intent, the robot may perform:
+- head nods  
+- arm gestures  
+- engagement poses  
+
+### Wellness / Support Routines
+The robot can initiate:
+- breathing exercises  
+- grounding prompts  
+- positivity messages  
+
+---
+
+## 3. Stopping the Pipeline
+
+Press:
+
+```
+CTRL + C
+```
+
+to safely terminate the interaction loop.
+
+---
+
+# Usage complete.
 ---
 
 # Setup complete.
