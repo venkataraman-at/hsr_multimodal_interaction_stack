@@ -18,7 +18,7 @@ A complete demonstration of the system, including:
 - GPT dialogue generation  
 - ROS 2 gesture execution  
 
-- [▶️ Full Multimodal Interaction Demo](/hsr_multimodal_interaction_stack/media/demos/full_demo.mp4)
+- [Full Demo](/hsr_multimodal_interaction_stack/media/demos/full_demo.mp4)
 
 ---
 
@@ -71,14 +71,15 @@ Below are screenshots from the CRNN-based vocal emotion classifier, showing how 
 These will show gestures or routines the robot performs:
 
 - ### Greeting
-- [🤖 Greeting Gesture Demo](/hsr_multimodal_interaction_stack/media/demos/greeting.mp4)
+- [Greeting Gesture Demo](/hsr_multimodal_interaction_stack/media/demos/greeting.mp4)
 
 - ### Head Nod
-- [🙂 Head Nod Demo](/hsr_multimodal_interaction_stack/media/demos/head_nod.mp4)
+- [Head Nod Demo](/hsr_multimodal_interaction_stack/media/demos/head_nod.mp4)
 
 - ### Head Shake
-- [🙃 Head Shake Demo](/hsr_multimodal_interaction_stack/media/demos/head_shake.mp4)
+- [Head Shake Demo](/hsr_multimodal_interaction_stack/media/demos/head_shake.mp4)
 
 - ### Goodbye
-- [👋 Goodbye Gesture Demo](/hsr_multimodal_interaction_stack/media/demos/goodbye.mp4)
+- [Goodbye Gesture Demo](/hsr_multimodal_interaction_stack/media/demos/goodbye.mp4)
+  
 ---
