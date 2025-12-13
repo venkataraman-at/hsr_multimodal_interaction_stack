@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "HSR Multimodal Interaction Stack"
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Venkataraman
+    given-names: Athmavidya
+affiliation: "RIVeR Lab, Northeastern University"
+year: 2025
+license: MIT
+repository-code: https://github.com/venkataraman-at/hsr_multimodal_interaction_stack
