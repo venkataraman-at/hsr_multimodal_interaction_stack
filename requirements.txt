@@ -1,0 +1,21 @@
+# Core
+numpy
+requests
+
+# Audio I/O
+sounddevice
+soundfile
+scipy
+
+# Speech Recognition
+openai-whisper
+
+# Emotion Recognition
+torch
+torchaudio
+
+# Text-to-Speech
+pyttsx3
+
+# Optional (recommended)
+webrtcvad
