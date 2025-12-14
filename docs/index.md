@@ -89,8 +89,9 @@ Use the navigation sidebar or the links below:
 
 - [System Architecture](architecture.md)  
 - [Installation & Setup](setup.md)  
-- [Usage Guide](usage.md)  
-- [Features](features.md)  
+- [Research Motivation](motivation.md)  
+- [Features](features.md)
+- [Demonstrations](demonstrations.md)  
 
 ---
 
