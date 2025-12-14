@@ -8,7 +8,7 @@ nav_order: 2
 **A Multimodal, Emotion-Aware Conversational Framework for Pediatric Clinical Support**  
 **Athmavidya Venkataraman**  
 Graduate Researcher, RIVeR Lab — Northeastern University  
-Advisor: **Prof. Taskin Padir**
+Advisor: **Dr. Taskin Padir**
 
 ---
 
