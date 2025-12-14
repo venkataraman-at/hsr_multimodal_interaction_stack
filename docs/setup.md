@@ -40,9 +40,6 @@ Recommended: create a virtual environment.
 ```
 pip install -r requirements.txt
 ```
-
-(Note: Add a `requirements.txt` later if needed.)
-
 ---
 
 ## 4. ROS 2 Setup
