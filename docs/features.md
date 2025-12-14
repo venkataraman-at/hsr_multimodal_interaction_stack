@@ -179,7 +179,28 @@ The system is designed to be expanded with additional modules:
 - Navigation/Manipulation pipelines  
 - Multi-user interaction  
 
-The modular approach allows future students or lab members to build on the framework.
+---
+
+## 9. Future Work
+
+The current system focuses on multimodal interaction, emotional awareness, and expressive behaviors. Several extensions are planned as future work:
+
+- **Task-Oriented Manipulation:**  
+  Integrating object-level manipulation pipelines (e.g., grasping, handover, puzzle solving) using HSR’s arm and gripper, driven by high-level LLM intent parsing.
+
+- **Navigation and Escorting:**  
+  Extending conversational commands to autonomous navigation behaviors such as escorting users, waypoint guidance, and context-aware motion planning.
+
+- **Multimodal Perception Fusion:**  
+  Combining vocal emotion recognition with visual cues (facial expression, body pose, gaze) for more robust affect inference.
+
+- **Personalization and Long-Term Memory:**  
+  Learning user preferences, interaction patterns, and comfort levels across sessions while maintaining strict privacy constraints.
+
+- **Clinical Environment Integration:**  
+  Adapting the interaction stack for deployment in real pediatric radiotherapy settings, including compliance with safety protocols, clinician-in-the-loop control, and environment-specific constraints.
+
+These extensions are intentionally separated from the current implementation to maintain safety, clarity, and experimental control in the present research phase.
 
 ---
 
